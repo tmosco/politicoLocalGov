@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+<h1>Election Result</h1>
+
+{% block content %}
+
+<table class="table">
+    <tr class="table_header">
+        {% for heading in headings %}
+        <th class="table_cell">{{heading}}</th>
+        {% endfor %}
+    </tr>
+    
+    
+    {% for row in party %}
+    <tr class="table_row">
+        {% for cell in row %}
+        <td class="table_cell">{{cell}}</td>
+        {% endfor %}
+    </tr>
+	{% endfor %}
+   
+
+</table>
+
+{% endblock %}

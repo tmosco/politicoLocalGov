@@ -1,0 +1,11 @@
+Flask==2.0.1
+Flask-SQLAlchemy==2.5.1
+Flask-WTF==0.15.1
+mysql-connector-python==8.0.26
+mysqlclient==2.0.3
+pdbpp==0.10.3
+pdp==0.3.0
+SQLAlchemy==1.4.22
+werkzeug==0.16.1 
+
+WTForms==2.3.3

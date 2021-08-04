@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+<h1>Election Result</h1>
+
+{% block content %}
+
+<div class="shadow p-3 mb-5 bg-body rounded">
+	<form method="POST"action="/unit">
+		{{ form.hidden_tag() }}
+		{{ form.name.label(class="form-label") }}
+		{{ form.name(class="form-control") }}
+		<br/>
+		<br/>
+		{{ form.submit(class="btn btn-secondary") }}
+
+
+	</form>
+</div>
+
+
+{% if data %}
+<div>
+
+	<table class="table">
+		<tr class="table_header">
+			{% for heading in headings %}
+			<th class="table_cell">{{heading}}</th>
+			{% endfor %}
+		</tr>
+			{% for row in result %}
+		<tr class="table_row">
+			{% for cell in row %}
+			<td class="table_cell">{{cell}}</td>
+			{% endfor %}
+		</tr>
+			{% endfor %}
+		
+	</table>
+</div>
+{% else %}
+<div>
+
+</div>
+{% endif %}
+
+
+{% endblock %}
